@@ -1,0 +1,27 @@
+.hero-section {
+    margin-top: 8%;
+}
+
+.cta-section {
+    margin-top: 100px;
+}
+
+.custom-btn:hover {
+    background-color: #E64A19;
+}
+
+.cus-search {
+    width: 450px;
+}
+
+.search-box {
+    transition: transform 0.3s ease;
+}
+.search-box:hover {
+    transform: scale(1.01);
+}
+
+.areyouopenforwork {
+    text-decoration: none;
+    color: black;
+}

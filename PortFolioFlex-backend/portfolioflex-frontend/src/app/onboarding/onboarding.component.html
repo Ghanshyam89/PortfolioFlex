@@ -1,0 +1,43 @@
+<app-header></app-header>
+<div class="onboarding-form">
+    <h1>Onboarding</h1>
+    <div class="step">
+        <h2>Step 1: Import from LinkedIn or Enter Details</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Your Name">
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Your Email">
+        <label for="contact">Contact No:</label>
+        <input type="tel" id="contact" placeholder="Your Contact No">
+        <label for="profile-photo">Profile Photo:</label>
+        <input type="file" id="profile-photo">
+        <button id="import-linkedin">Import from LinkedIn</button>
+    </div>
+
+    <div class="step" id="step-2">
+        <h2>Step 2: Select Your Expertise</h2>
+        <label>Select your area of expertise:</label>
+        <div class="expertise-options">
+            <label *ngFor="let role of expertiseRoles">
+                <input type="radio" [(ngModel)]="selectedRole" [value]="role.value" name="expertise">
+                {{ role.label }}
+            </label>
+        </div>
+        <div class="connections">
+            <h3>Connect to:</h3>
+            <ul>
+                <li *ngFor="let connection of connections">{{ connection }}</li>
+            </ul>
+        </div>
+        <button id="continue" (click)="populateConnectionsList()">Continue</button>
+    </div>
+
+
+    <div class="step">
+        <h2>Step 3: Add a Video</h2>
+        <p>Record a less than 3min video introducing yourself and your achievements.</p>
+        <button id="record-video">Record Video</button>
+        <button id="skip">Skip</button>
+        <button id="complete">Complete Onboarding</button>
+    </div>
+</div>
